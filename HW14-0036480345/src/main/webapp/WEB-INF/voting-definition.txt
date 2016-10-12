@@ -1,0 +1,7 @@
+1	The Cranberries	https://www.youtube.com/watch?v=6Ejga4kJUts
+2	The Peaches	https://www.youtube.com/watch?v=EpDmklLFXVc
+3	Smashing Pumpkins	https://www.youtube.com/watch?v=q-KE9lvU810
+4	Vanilla Ice	https://www.youtube.com/watch?v=rog8ou-ZepE
+5	Red Hot Chili Peppers	https://www.youtube.com/watch?v=kS-YTlJZOl0
+6	Black Eyed Peas	https://www.youtube.com/watch?v=ZaI2IlHwmgQ
+7	Vanilla Fudge	https://www.youtube.com/watch?v=YFabNBveHOk

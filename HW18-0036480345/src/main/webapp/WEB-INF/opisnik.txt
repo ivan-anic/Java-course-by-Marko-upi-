@@ -1,0 +1,57 @@
+alpha.png
+a greek letter alpha
+red,blue,round
+chi.png
+a greek letter chi
+one,two,three
+delta.png
+a greek letter delta
+blue,round,two
+gamma.png
+a greek letter gamma
+one,red
+omega.png
+a greek letter omega
+round,two
+phi.png
+a greek letter phi
+red,three
+psi.png
+a greek letter psi
+blue,three
+rho.png
+a greek letter rho
+red,fancy,round
+sigma.png
+a greek letter sigma
+blue,square,round
+theta.png
+a greek letter theta
+red,two,one
+upsilon.png
+a greek letter upsilon
+one,three,red,blue,square
+xi.png
+a greek letter xi
+round,square
+zeta.png
+a greek letter zeta
+blue
+three_fingers.png
+a random three fingers
+three,red
+sqrt.png
+a square root
+red,blue,two,one,three,fancy
+7.png
+a number 7
+fancy,red
+s.png
+a letter s
+fancy,blue
+g.png
+a letter g
+fancy,two,one
+x.png
+a letter x
+square,round,three

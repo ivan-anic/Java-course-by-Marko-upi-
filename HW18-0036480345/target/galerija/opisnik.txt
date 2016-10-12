@@ -1,0 +1,6 @@
+slika.jpg
+ovo je opis slike
+slika,marko,cupic,horor
+slikica.jpg
+ovo je loši koro
+koro,dost,loše,svaka,èast,horor

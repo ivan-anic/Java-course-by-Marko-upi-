@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image gallery</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css"
+	media="screen" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/htmlescaping.js"></script>
+<script type="text/javascript">
+	$(document)
+			.ready(
+					function() {
+						$
+								.ajax({
+									url : "servlets/tags",
+									data : {
+										dummy : Math.random()
+									},
+									dataType : "json",
+									success : function(data) {
+										var tags = data;
+										var html = "";
+										if (tags.length == 0) {
+											html = "No tags available.";
+										} else {
+											for (var i = 0; i < tags.length; i++) {
+												html += "<button type=\"button\" onclick=\"getThumbnails('"
+												html += tags[i]
+												html += "')\">"
+												html += htmlEscape(tags[i])
+												html += "</button>";
+											}
+										}
+										$("#tags").html(html);
+									}
+								});
+					});
+
+	function getThumbnails(tag) {
+		$.ajax({
+			url : "servlets/thumbnails",
+			data : {
+				filter : tag
+			},
+			dataType : "json",
+			success : function(data) {
+				var images = data;
+				var html = "";
+				for (var i = 0; i < images.length; i++) {
+					html += "<img onclick=\"getImage('"
+					html += images[i].name
+					html += "', '"
+					html += images[i].description
+					html += "', '"
+					html += images[i].tags
+					html += "')\" id=\""
+					html += images[i].name
+					html += "\" src=\"servlets/thumbnails?name="
+					html += images[i].name
+					html += "\" alt=\"\"/>";
+				}
+				$("#thumbnails").html(html);
+			}
+		});
+	}
+
+	function getImage(name, description, imgtags) {
+		document.getElementById('preview').src = "servlets/fullImage?name="
+				+ name;
+		document.getElementById('description').innerHTML = description;
+		var html = "tags: ";
+		for (var i = 0; i < imgtags.length; i++) {
+			html += imgtags[i];
+		}
+		document.getElementById('imgtags').innerHTML = html;
+	}
+</script>
+</head>
+<body>
+
+	<h1>Welcome to the image gallery</h1>
+
+	<p>Tags list:</p>
+
+	<div id="tags">&nbsp;</div>
+
+	<div class="thumbnails" id="thumbnails">&nbsp;</div>
+
+	<h3 id="description">&nbsp;</h3>
+
+	<p id='imgtags'>&nbsp;</p>
+
+	<img class="preview" id="preview" src="" alt="" />
+
+
+</body>
+</html>

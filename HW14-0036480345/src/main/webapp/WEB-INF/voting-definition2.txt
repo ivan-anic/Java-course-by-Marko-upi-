@@ -1,0 +1,7 @@
+1	Chair	http://www.ikea.com/PIAimages/0105948_PE253720_S5.JPG
+2	Armchair	http://st.hzcdn.com/simgs/f0e136d3006bbb15_4-8613/contemporary-armchairs-and-accent-chairs.jpg
+3	Rocking Chair	https://upload.wikimedia.org/wikipedia/commons/3/38/Moravsk%C3%A1_galerie_02_-_Thonet-Mundus_k%C5%99eslo.jpg
+4	Stool	http://cdn.shopify.com/s/files/1/0048/4002/products/another-country-stool-one-oak-natural-001_b069fb13-85a5-47a6-ab04-d729d922894d.jpeg?v=1458401310
+5	Sofa	http://images2.roomstogo.com/is/image/roomstogo/lr_sof_10117946_bellingham~Cindy-Crawford-Home-Bellingham-Cardinal-Sofa.jpeg?$PDP_Primary_525x366$
+6	Recliner	https://images.furnituredealer.net/img/products%2Fcatnapper%2Fcolor%2Fbentley%204404_4404-2%20m-m.jpg
+7	Bench	http://www.uppergwynedd.org/media/8514/bench.jpg
