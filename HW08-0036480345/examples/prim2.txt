@@ -1,0 +1,40 @@
+			jump @start
+@zero:		DEFINT 0
+@count:		DEFINT 5
+
+@start:		load r1, @message
+			load r2, @failed
+			load r3, @success
+			
+			call @input				; dohvaca podatak dok god korisnik ne preda integer i onda taj integer spremi u r0
+			
+			load r1, @count
+			load r2, @zero
+			load r3, @enter
+@loop:		testEquals r1, r2
+			jumpIfTrue @end
+			echo r0
+			echo r3
+			increment r0
+			decrement r1
+			jump @loop
+					
+@end:		halt				
+			
+@input:		echo r1					; potprogram za unos broja
+			input @integer
+			jumpIfTrue @exit
+			echo r2
+			jump @input
+@exit:		load r0, @integer
+			echo r3
+			ret
+	
+@message:	DEFSTR "Unesite pocetni broj: "
+@failed:	DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n"
+@success:	DEFSTR "Sljedećih 5 brojeva je:\n"
+@enter:		DEFSTR "\n"
+			
+@integer:	RESERVE					; rezerviramo lokaciju za uneseni broj
+			RESERVE:19				; rezerviramo 19 lokacija u memoriji
+@stackTop:	RESERVE					; rezerviramo još jednu, ukupno 20 lokacija; ova postaje vrh stoga

@@ -1,0 +1,83 @@
+			load	r0,	@nula
+			load	r1,	@jedan
+			load	r2, @dva
+			load	r4, @msg1
+			load	r5, @msg2
+			load	r6, @msg3
+
+@provjera:	echo	r4
+			input	@location
+			jumpIfTrue	@next1
+			echo	r6
+			jump @provjera
+
+
+@next1:		load	r3,	@location
+			testEquals	r3,	r0
+			jumpIfTrue	@jeNula
+			testEquals	r3, r1
+			jumpIfTrue	@jeJedan
+			jump @next2
+
+@jeNula:	echo	r5
+			echo	r0
+			halt
+
+@jeJedan:	echo 	r5
+			echo 	r1
+			halt
+
+@next2:		push r3
+			call @fib
+			pop		r3
+			echo	r5
+			echo	r3
+			halt
+
+@fib:		pop 	r10
+			pop		r3
+			testEquals	r3, r0
+			jumpIfTrue	@jeNula2
+			testEquals	r3, r1
+			jumpIfTrue	@jeJedan2
+			jump @next3
+
+@jeNula2:	push r0
+			push r10
+			ret
+
+@jeJedan2:	push r1
+			push r10
+			ret
+
+@next3:		move 	r7, r3
+			decrement r7
+			move 	r8, r7
+			decrement	r8
+			push	r10
+			push	r8
+			push	r7
+			call	@fib
+			pop		r7
+			pop		r8
+			push	r7
+			push	r8
+			call	@fib
+			pop		r8
+			pop		r7
+			pop		r10
+			add	r9,	r7, r8
+			push	r9
+			push	r10	
+			ret
+
+# dodatni argumenti
+@nula:		DEFINT 0
+@jedan:		DEFINT 1
+@dva:		DEFINT 2
+@location:	DEFINT 50
+@msg1:		DEFSTR "Unesite željeni fibonaccijev broj: "
+@msg2:		DEFSTR "Traženi fibonaccijev broj je: "
+@msg3:		DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n"
+			RESERVE:19
+@stackTop:	RESERVE	
