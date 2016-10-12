@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SimpleCalculus</string>
+    <string name="op1">zbrajanje</string>
+    <string name="op2">oduzimanje</string>
+    <string name="op3">množenje</string>
+    <string name="op4">dijeljenje</string>
+    <string name="calculate">Izračunaj</string>
+    <string name="caclculationError" formatted="false">Prilikom obavljanja operacije %s nad unosima %s i %s došlo je do sljedeće greške: %s</string>
+    <string name="result" formatted="false">Rezultat operacije %s je %s.</string>
+    <string name="ok">OK</string>
+    <string name="sendReport">Pošalji izvještaj</string>
+    <string name="noOperationSelected">Molim odaberite operaciju!</string>
+    <string name="noMailClients">Nije pronađen niti jedan e-mail klijent!</string>
+    <string name="mailSubject">0036480345: dz report</string>
+
+    <string-array name="mailList">
+        <item>ana.baotic@infinum.hr</item>
+    </string-array>
+</resources>
